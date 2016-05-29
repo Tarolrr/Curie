@@ -12,7 +12,7 @@ using System;
 namespace Curie{
 	public class CurieBodyEmitter:ICurieEmitter{
 		public CurieBodyEmitter (){
-		}
+		} 
 	}
 }
 
