@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{517B1CCA-5B48-4D6B-8CDB-3481E8E0CB6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Curie</RootNamespace>
+    <AssemblyName>Curie</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>G:\Program Files %28x86%29\Steam\SteamApps\common\Kerbal Space Program\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>G:\Program Files %28x86%29\Steam\SteamApps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>G:\Program Files %28x86%29\Steam\SteamApps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="KSPUtil">
+      <HintPath>G:\Program Files %28x86%29\Steam\SteamApps\common\Kerbal Space Program\KSP_x64_Data\Managed\KSPUtil.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Src\" />
+    <Folder Include="Build\" />
+    <Folder Include="TacLib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Src\AssemblyInfo.cs" />
+    <Compile Include="Src\BoundsRenderer.cs" />
+    <Compile Include="Src\CrewMemberInfo.cs" />
+    <Compile Include="Src\CurieAddonConfig.cs" />
+    <Compile Include="Src\CurieBodyEmitter.cs" />
+    <Compile Include="Src\CuriePartEmitter.cs" />
+    <Compile Include="Src\CuriePlaceEmitter.cs" />
+    <Compile Include="Src\CurieRay.cs" />
+    <Compile Include="Src\CurieVolumeEmitter.cs" />
+    <Compile Include="Src\HSBColor.cs" />
+    <Compile Include="Src\ICurieEmitter.cs" />
+    <Compile Include="Src\ModuleCurieAbsorber.cs" />
+    <Compile Include="Src\ScenarioCurieData.cs" />
+    <Compile Include="TacLib\Source\ButtonWrapper.cs" />
+    <Compile Include="TacLib\Source\Icon.cs" />
+    <Compile Include="TacLib\Source\Logging.cs" />
+    <Compile Include="TacLib\Source\PartExtensions.cs" />
+    <Compile Include="TacLib\Source\PopupWindow.cs" />
+    <Compile Include="TacLib\Source\ToolbarButton.cs" />
+    <Compile Include="TacLib\Source\ToolbarWrapper.cs" />
+    <Compile Include="TacLib\Source\Utilities.cs" />
+    <Compile Include="TacLib\Source\Window.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Build\Curie\CuriePlaceEmitters.cfg" />
+    <None Include="Build\Curie\settings.cfg" />
+    <None Include="TacLib\Source\CommonProperties.proj" />
+  </ItemGroup>
+</Project>
